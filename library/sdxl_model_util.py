@@ -141,7 +141,7 @@ def _load_state_dict_on_device(model, state_dict, device, dtype=None):
     # dtype will use fp32 as default
     missing_keys = list(model.state_dict().keys() - state_dict.keys())
     unexpected_keys = list(state_dict.keys() - model.state_dict().keys())
-
+    print("dtype is ********************************",dtype)
     # similar to model.load_state_dict()
     if not missing_keys and not unexpected_keys:
         for k in list(state_dict.keys()):
