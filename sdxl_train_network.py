@@ -177,7 +177,8 @@ if __name__ == "__main__":
     parser = setup_parser()
 
     args = parser.parse_args()
+    print('args=================',args)
     args = train_util.read_config_from_file(args, parser)
-
+    print('args=================',args)
     trainer = SdxlNetworkTrainer()
     trainer.train(args)
